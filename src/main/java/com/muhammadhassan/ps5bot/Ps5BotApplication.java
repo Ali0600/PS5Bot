@@ -13,6 +13,8 @@ public class Ps5BotApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context =  SpringApplication.run(Ps5BotApplication.class, args);
 		AmazonBot a = context.getBean(AmazonBot.class);
+		Thread t1 = new Thread(a);
+		t1.start();
 	}
 
 }
